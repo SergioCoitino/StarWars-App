@@ -1,13 +1,27 @@
 import React from "react";
-import {  NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 import "./components.css";
 
-function Header() {
+export default function Header() {
+  const navItems = [
+    { path: "/", label: "Home", icon: "fa-solid fa-house" },
+    { path: "/characters", label: "Characters", icon: "fa-solid fa-users" },
+    { path: "/starships", label: "Starships", icon: "fa-solid fa-shuttle-space" },
+    { path: "/planets", label: "Planets", icon: "fa-solid fa-earth-americas" },
+    { path: "/vehicles", label: "Vehicles", icon: "fa-solid fa-motorcycle" },
+    { path: "/species", label: "Species", icon: "fa-solid fa-robot" },
+  ];
+
+  const socialLinks = [
+    { url: "https://www.instagram.com/sergio.coitino/", label: "Instagram", icon: "fa-brands fa-instagram" },
+    { url: "https://www.linkedin.com/in/sergiocoitino/", label: "LinkedIn", icon: "fa-brands fa-linkedin-in" },
+    { url: "https://github.com/SergioCoitino", label: "GitHub", icon: "fa-brands fa-github" },
+  ];
+
   return (
-    <>      
-    
-    {/* <div className="nav-mobile">
+    <>
+      {/* MOBILE NAV */}
+      <div className="nav-mobile">
         <input type="checkbox" id="check" className="menu-check" />
 
         <label htmlFor="check" className="menu-btn">
@@ -17,64 +31,59 @@ function Header() {
 
         <nav className="sidebar menu-nav">
           <ul>
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <NavLink
+                  to={item.path}
+                  className={({ isActive }) => (isActive ? "active" : "")}
+                >
+                  <i className={item.icon}></i> {item.label}
+                </NavLink>
+              </li>
+            ))}
 
-            <li><Link to="/characters"><i className="fa-solid fa-users"></i> Characters</Link></li>
-
-            <li><Link to="/starships"><i className="fa-solid fa-shuttle-space"></i> Starships</Link></li>
-
-
-            <li><Link to="/planets"><i className="fa-solid fa-earth-americas"></i> Planets</Link></li>
-
-            <li><Link to="/vehicles"><i className="fa-solid fa-motorcycle"></i> Vehicles</Link></li>
-
-            <li><Link to="/species"><i className="fa-solid fa-robot"></i> Species</Link></li>
-
-            <li><a href="https://github.com/SergioCoitino" target="_blank"><i className="fa-brands fa-github"></i> Github</a></li>
-
-            <li><a href="https://www.instagram.com/sergio.coitino/" target="_blank"><i className="fa-brands fa-instagram"></i> Instagram</a></li>
-
-            <li><a href="https://www.linkedin.com/in/sergiocoitino/" target="_blank"><i className="fa-brands fa-linkedin-in"></i> LinkedIn</a></li>
-
+            {/* SOCIAL LINKS MOBILE */}
+            {socialLinks.map((item, index) => (
+              <li key={`s-${index}`}>
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  <i className={item.icon}></i> {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
-        </nav>        
-    </div> */}
-    <nav className="navegacao">
-      <ul className="menu">
+        </nav>
+      </div>
 
-            <li ><NavLink className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")} to="/">Home</NavLink></li>
+      {/* DESKTOP NAV */}
+      <nav className="navegacao">
+        <ul className="menu">
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <NavLink
+                className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}
+                to={item.path}
+              >
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
 
-            <li ><NavLink className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")} to="/characters">Characters</NavLink></li>
-            
-            <li ><NavLink className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")} to="/starships">Starships</NavLink></li>
-
-            <li ><NavLink className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")} to="/planets">Planets</NavLink></li>
-
-            <li ><NavLink className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")} to="/vehicles">Vehicles</NavLink></li>
-
-            <li ><NavLink className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")} to="/species">Species</NavLink></li>
-
-            <ul class="social-media">
-
-                  <a className="nav-item" href="https://www.instagram.com/sergio.coitino/" target="_blank">
-                      <i class="fa-brands fa-instagram"></i>
-                  </a>
-                  
-                  <a className="nav-item" href="https://www.linkedin.com/in/sergiocoitino/" target="_blank" >
-                      <i class="fa-brands fa-linkedin-in"></i>
-                  </a>
-                  
-                  <a className="nav-item" href="https://github.com/SergioCoitino" target="_blank">
-                      <i class="fa-brands fa-github"></i>
-                  </a>
-
-            </ul>          
-      </ul>        
-        
-
-    </nav>   
+          <ul className="social-media">
+            {socialLinks.map((item, index) => (
+              <li key={index}>
+                <a
+                  className="nav-item"
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className={item.icon}></i>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </ul>
+      </nav>
     </>
-
   );
 }
-
-export default Header;
