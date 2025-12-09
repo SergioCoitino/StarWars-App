@@ -10,7 +10,7 @@ import Img3 from "./assets/3.jpg";
 import Img4 from "./assets/4.jpg";
 import Img5 from "./assets/5.jpg";
 
-import "./components/components.css";
+import "./App.css";
 
 export default function App() {
   // Lista de páginas con imágenes → más limpio, escalable y mantenible

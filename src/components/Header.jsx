@@ -16,6 +16,7 @@ export default function Header() {
     { url: "https://www.instagram.com/sergio.coitino/", label: "Instagram", icon: "fa-brands fa-instagram" },
     { url: "https://www.linkedin.com/in/sergiocoitino/", label: "LinkedIn", icon: "fa-brands fa-linkedin-in" },
     { url: "https://github.com/SergioCoitino", label: "GitHub", icon: "fa-brands fa-github" },
+    { url: "https://sergio-coitino-portfolio.netlify.app/", label: "Portfolio", icon: "fa-solid  fa-user-tie" },
   ];
 
   return (
