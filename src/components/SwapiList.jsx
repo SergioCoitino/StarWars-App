@@ -45,15 +45,23 @@ export default function SwapiList({
       </Modal>
 
       {/* PAGINACIÓN */}
+
       <div className="buttons">
-        <button onClick={goPrev} disabled={!prev}>
-          Anterior
+        <button
+          onClick={goPrev}
+          style={{ visibility: prev ? "visible" : "hidden" }}
+        >
+          Previous
         </button>
 
-        <button onClick={goNext} disabled={!next}>
-          Próxima
+        <button
+          onClick={goNext}
+          style={{ visibility: next ? "visible" : "hidden" }}
+        >
+          Next
         </button>
       </div>
+
     </div>
   );
 }

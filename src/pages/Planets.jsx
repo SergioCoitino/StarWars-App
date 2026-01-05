@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import FallbackPlanet from "../assets/Fallback-planet.png";
 
 
 export default function Planets() {
@@ -16,13 +17,13 @@ export default function Planets() {
         imagePath={(id) =>
           `https://starwarsgallery.netlify.app/assets/planets/${id}.jpg`
         }
-        fallback="/assets/fallback-planets.png"
+        fallback={FallbackPlanet}
         renderDetails={(item, id) => (
           <>
             <div
               className="item-image"
               style={{
-                backgroundImage: `url(https://starwarsgallery.netlify.app/assets/planets/${id}.jpg)`
+                backgroundImage: `url(https://starwarsgallery.netlify.app/assets/planets/${id}.jpg), url(${FallbackPlanet})`,
               }}
             ></div>
 

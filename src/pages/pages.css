@@ -105,6 +105,7 @@ h2 {
 }
 
 .item-details {
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     font-weight: lighter;
@@ -139,10 +140,7 @@ button:hover {
     color: gold;
 }
 
-#back-button,
-#next-button {
-    visibility: hidden;
-}
+
 
 /* RESPONSIVE */
 
