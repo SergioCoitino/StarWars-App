@@ -1,4 +1,4 @@
-# Star Wars Data Explorer
+# Star Wars App
 
 > 📘 **Read this documentation in English:** [README.md](README.md)
 
@@ -6,7 +6,7 @@
 
 ## 📌 Descripción General
 
-**Star Wars Data Explorer** es una aplicación web desarrollada para consumir datos estructurados desde **SWAPI (Star Wars API)** e integrarlos con una **API propia de imágenes**, garantizando una correspondencia exacta entre los datos y sus representaciones visuales.
+**Star Wars App** es una aplicación web desarrollada para consumir datos estructurados desde **SWAPI (Star Wars API)** e integrarlos con una **API propia de imágenes**, garantizando una correspondencia exacta entre los datos y sus representaciones visuales.
 
 Este proyecto **no es un portfolio**, sino una aplicación funcional enfocada en:
 

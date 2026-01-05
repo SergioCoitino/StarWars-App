@@ -1,4 +1,4 @@
-# Star Wars Data Explorer
+# Star Wars App
 
 > 📘 **Read this documentation in Spanish:** [README.es.md](README.es.md)
 
@@ -6,7 +6,7 @@
 
 ## 📌 Project Overview
 
-**Star Wars Data Explorer** is a web application designed to consume and display structured data from the public **SWAPI (Star Wars API)** while integrating a **custom-built image API** that provides visual representations aligned 1:1 with SWAPI resources.
+**Star Wars App** is a web application designed to consume and display structured data from the public **SWAPI (Star Wars API)** while integrating a **custom-built image API** that provides visual representations aligned 1:1 with SWAPI resources.
 
 This project is **not a portfolio**, but a functional application focused on:
 
