@@ -126,6 +126,26 @@ Incluye configuración para:
 
 ---
 
+## 👤 Autor y Enlaces
+
+- **Portfolio:** https://sergio-coitino.netlify.app/
+- **LinkedIn:** https://www.linkedin.com/in/sergio-coitino/
+- **GitHub:** https://github.com/SergioCoitino
+
+---
+
+## ⭐ Feedback y Apoyo
+
+Si este proyecto te resultó útil o interesante:
+
+- ⭐ Considera **dejar una estrella en GitHub**
+- 📝 Comentarios, sugerencias y evaluaciones son bienvenidas
+
+Tu apoyo ayuda a mejorar y evolucionar el proyecto.
+
+---
+
+
 ## 📜 Licencia
 
 Este proyecto está licenciado bajo la **Licencia MIT**. Consulta el archivo `LICENSE` para más información.

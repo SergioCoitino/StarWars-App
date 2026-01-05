@@ -126,6 +126,25 @@ Special configuration ensures:
 
 ---
 
+## 👤 Author & Links
+
+- **Portfolio:** https://sergio-coitino.netlify.app/
+- **LinkedIn:** https://www.linkedin.com/in/sergio-coitino/
+- **GitHub:** https://github.com/SergioCoitino
+
+---
+
+## ⭐ Feedback & Support
+
+If you found this project useful or interesting:
+
+- ⭐ Please consider **starring the repository on GitHub**
+- 📝 Feedback, suggestions, and reviews are very welcome
+
+Your support helps improve and evolve the project.
+
+---
+
 ## 📜 License
 
 This project is licensed under the **MIT License**. See the `LICENSE` file for details.
