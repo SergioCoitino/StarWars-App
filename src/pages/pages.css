@@ -185,3 +185,41 @@ button:hover {
     }
 }
 
+/* 404 PAGE */
+
+.notfound-container {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  gap: 1rem;
+}
+
+.notfound-title {
+  font-size: 6rem;
+  letter-spacing: 4px;
+  color: #ffe81f; /* Star Wars yellow */
+}
+
+.notfound-text {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+.notfound-button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid #ffe81f;
+  color: #ffe81f;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.notfound-button:hover {
+  background-color: #ffe81f;
+  color: #000;
+}

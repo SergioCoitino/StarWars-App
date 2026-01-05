@@ -10,6 +10,7 @@ import Starships from "./pages/Starships.jsx";
 import Planets from "./pages/Planets.jsx";
 import Vehicles from "./pages/Vehicles.jsx";
 import Species from "./pages/Species.jsx";
+import NotFound from "./pages/NotFound.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -26,7 +27,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/species" element={<Species />} />
 
         {/* Manejo de página no encontrada */}
-        <Route path="*" element={<h1 style={{ padding: "2rem" }}>404 – Página no encontrada</h1>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

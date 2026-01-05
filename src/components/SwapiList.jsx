@@ -14,6 +14,10 @@ export default function SwapiList({
   const { items, next, prev, goNext, goPrev } = useSwapiPaginated(endpoint);
   const [selected, setSelected] = React.useState(null);
 
+  const getIdFromUrl = (url) => {
+    return url.split("/").filter(Boolean).pop();
+  };
+
   return (
     <div className="main-container">
       <h2>{title}</h2>
@@ -21,7 +25,7 @@ export default function SwapiList({
       {/* GRID DE ITEMS */}
       <div className="main-content">
         {items.map((item) => {
-          const id = item.url.replace(/\D/g, "");
+          const id = getIdFromUrl(item.url);
 
           return (
             <ItemCard
@@ -29,7 +33,7 @@ export default function SwapiList({
               name={item.name}
               image={imagePath(id)}
               fallback={fallback}
-              onClick={() => setSelected({ id, ...item })}
+              onClick={() => setSelected({ ...item, id })}
             />
           );
         })}
