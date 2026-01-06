@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
@@ -10,8 +11,13 @@ export default function Characters() {
     <>
       <Header />
 
+      <Hero 
+      heroTitle="Characters"
+      heroSubtitle="Discover Characters of the Star Wars Universe"
+      heroSubtitle2="Click on the photo to see more details."
+      />
+
       <SwapiList
-        title="Characters"
         endpoint="people"
         imagePath={(id) =>
           `https://starwarsgallery.netlify.app/assets/people/${id}.jpg`

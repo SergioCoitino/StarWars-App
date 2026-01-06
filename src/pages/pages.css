@@ -9,14 +9,7 @@
     padding-top: 45px;
 }
 
-h2 {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    font-weight: 700;
-    height: 33px;
-    font-size: 25px;
-    margin: 15px;
-}
+
 
 .main-content {
     width: 100%;
@@ -155,7 +148,7 @@ button:hover {
     .modal-content { width: 50%; }
     .item-details { font-size: 0.9rem; }
     .main-container{padding-top: 0;}
-    .main-content{margin-top: 70px;}
+    .main-content{margin-top: 2rem;}
 }
 
 @media (max-width: 500px) {

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
@@ -9,6 +10,12 @@ export default function Vehicles() {
   return (
     <>
       <Header />
+
+      <Hero 
+      heroTitle="Vehicles"
+      heroSubtitle="Discover Vehicles of the Star Wars Universe"
+      heroSubtitle2="Click on the photo to see more details."
+      />
 
       <SwapiList
         title="Vehicles"

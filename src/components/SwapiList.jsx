@@ -20,7 +20,6 @@ export default function SwapiList({
 
   return (
     <div className="main-container">
-      <h2>{title}</h2>
 
       {/* GRID DE ITEMS */}
       <div className="main-content">
