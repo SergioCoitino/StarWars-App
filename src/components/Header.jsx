@@ -23,11 +23,11 @@ export default function Header() {
     <>
       {/* MOBILE NAV */}
       <div className="nav-mobile">
-        <input type="checkbox" id="check" className="menu-check" />
+        <input type="checkbox" id="check" className="menu-check" aria-label="Toggle navigation menu" />
 
-        <label htmlFor="check" className="menu-btn">
-          <i className="fas fa-bars" id="btn"></i>
-          <i className="fas fa-times" id="cancel"></i>
+        <label htmlFor="check" className="menu-btn" aria-label="Toggle navigation menu">
+          <i className="fas fa-bars" id="btn" aria-hidden="true"></i>
+          <i className="fas fa-times" id="cancel" aria-hidden="true"></i>
         </label>
 
         <nav className="sidebar menu-nav">
@@ -38,7 +38,7 @@ export default function Header() {
                   to={item.path}
                   className={({ isActive }) => (isActive ? "active" : "")}
                 >
-                  <i className={item.icon}></i> {item.label}
+                  <i className={item.icon} aria-hidden="true"></i> {item.label}
                 </NavLink>
               </li>
             ))}
@@ -47,7 +47,7 @@ export default function Header() {
             {socialLinks.map((item) => (
               <li key={item.label}>
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  <i className={item.icon}></i> {item.label}
+                  <i className={item.icon} aria-hidden="true"></i> {item.label}
                 </a>
               </li>
             ))}
@@ -80,7 +80,7 @@ export default function Header() {
                     rel="noopener noreferrer"
                     aria-label={item.label}
                   >
-                    <i className={item.icon}></i>
+                    <i className={item.icon} aria-hidden="true"></i>
                   </a>
                 </li>
               ))}

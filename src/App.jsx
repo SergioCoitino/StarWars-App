@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
 import Img1 from "./assets/1.jpg";
-import Img2 from "./assets/2.png";
+import Img2 from "./assets/2.jpg";
 import Img3 from "./assets/3.jpg";
 import Img4 from "./assets/4.jpg";
 import Img5 from "./assets/5.jpg";
@@ -38,13 +38,16 @@ export default function App() {
 
           {/* FILA SUPERIOR */}
           <div className="cards-page">
-            {pages.map((item) => (
+            {pages.map((item, index) => (
               <Link className="col" key={item.path} to={item.path}>
                 <img
                   className="col-imagem"
                   src={item.img}
                   alt={item.label}
-                  loading="lazy"
+                  width="430"
+                  height="350"
+                  loading={index < 2 ? "eager" : "lazy"}
+                  fetchPriority={index === 0 ? "high" : "auto"}
                 />
                 <span className="col-title">
                   {item.label}
