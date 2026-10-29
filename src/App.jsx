@@ -5,13 +5,14 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 
-import Img1 from "./assets/1.jpg";
 import Img2 from "./assets/2.jpg";
 import Img3 from "./assets/3.jpg";
 import Img4 from "./assets/4.jpg";
 import Img5 from "./assets/5.jpg";
 
 import "./App.css";
+
+const Img1 = "/1.jpg";
 
 export default function App() {
 
@@ -46,8 +47,9 @@ export default function App() {
                   alt={item.label}
                   width="430"
                   height="350"
-                  loading={index < 2 ? "eager" : "lazy"}
+                  loading={index === 0 ? "eager" : "lazy"}
                   fetchPriority={index === 0 ? "high" : "auto"}
+                  decoding={index === 0 ? "sync" : "async"}
                 />
                 <span className="col-title">
                   {item.label}
