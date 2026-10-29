@@ -4,10 +4,15 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import useSEO from "../hooks/useSEO";
 import FallbackPlanet from "../assets/Fallback-planet.png";
 
-
 export default function Planets() {
+  useSEO({
+    title: "Planets | Star Wars App",
+    description: "Explore planets of the Star Wars galaxy including Tatooine, Hoth, Coruscant, and Dagobah."
+  });
+
   return (
     <>
       <Header />

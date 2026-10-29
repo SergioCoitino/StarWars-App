@@ -122,6 +122,7 @@ Special configuration ensures:
 ## 🌍 Live Links
 
 * **Live App:** [https://star-warsapp.netlify.app/](https://star-warsapp.netlify.app/)
+* **Companion Image API & Gallery:** [https://starwarsgallery.netlify.app/](https://starwarsgallery.netlify.app/)
 * **GitHub Repository:** [https://github.com/SergioCoitino/StarWars-App](https://github.com/SergioCoitino/StarWars-App)
 
 ---

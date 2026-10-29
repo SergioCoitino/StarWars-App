@@ -13,6 +13,7 @@ export default function Header() {
   ];
 
   const socialLinks = [
+    { url: "https://starwarsgallery.netlify.app/", label: "Star Wars Gallery", icon: "fa-solid fa-images" },
     { url: "https://www.instagram.com/sergio.coitino/", label: "Instagram", icon: "fa-brands fa-instagram" },
     { url: "https://www.linkedin.com/in/sergio-coitino/", label: "LinkedIn", icon: "fa-brands fa-linkedin-in" },
     { url: "https://github.com/SergioCoitino", label: "GitHub", icon: "fa-brands fa-github" },
@@ -79,6 +80,7 @@ export default function Header() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={item.label}
+                    title={item.label}
                   >
                     <i className={item.icon} aria-hidden="true"></i>
                   </a>

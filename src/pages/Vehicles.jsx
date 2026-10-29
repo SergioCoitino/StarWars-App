@@ -4,10 +4,15 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import useSEO from "../hooks/useSEO";
 import FallbackImg from "../assets/Fallback-planet.png";
 
-
 export default function Vehicles() {
+  useSEO({
+    title: "Vehicles | Star Wars App",
+    description: "Discover ground and atmospheric vehicles of Star Wars like the AT-AT, Snowspeeder, and Speeder Bike."
+  });
+
   return (
     <>
       <Header />

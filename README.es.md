@@ -122,6 +122,7 @@ Incluye configuración para:
 ## 🌍 Enlaces
 
 * **Aplicación en vivo:** [https://star-warsapp.netlify.app/](https://star-warsapp.netlify.app/)
+* **Galería y API de imágenes complementaria:** [https://starwarsgallery.netlify.app/](https://starwarsgallery.netlify.app/)
 * **Repositorio GitHub:** [https://github.com/SergioCoitino/StarWars-App](https://github.com/SergioCoitino/StarWars-App)
 
 ---

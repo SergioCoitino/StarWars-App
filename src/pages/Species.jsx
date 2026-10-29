@@ -4,10 +4,15 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import useSEO from "../hooks/useSEO";
 import FallbackImg from "../assets/Fallback-planet.png";
 
-
 export default function Species() {
+  useSEO({
+    title: "Species | Star Wars App",
+    description: "Discover diverse species across the Star Wars galaxy including Wookiees, Twi'leks, and Droids."
+  });
+
   return (
     <>
       <Header />

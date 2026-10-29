@@ -4,10 +4,15 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import useSEO from "../hooks/useSEO";
 import FallbackImg from "../assets/Fallback-planet.png";
 
-
 export default function Characters() {
+  useSEO({
+    title: "Characters | Star Wars App",
+    description: "Discover iconic Star Wars characters like Luke Skywalker, Darth Vader, and Princess Leia with detailed stats and images."
+  });
+
   return (
     <>
       <Header />

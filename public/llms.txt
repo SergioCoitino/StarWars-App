@@ -1,0 +1,28 @@
+# Star Wars App
+
+> An interactive web application consuming structured Star Wars data from the public SWAPI (Star Wars API) and pairing each entity with visual assets provided by the companion project Star Wars Gallery.
+
+## Overview
+- Website: https://star-warsapp.netlify.app/
+- Source Code: https://github.com/SergioCoitino/StarWars-App
+- Author: Sergio Coitiño (https://sergio-coitino.netlify.app/)
+- Architecture: React Single Page Application (SPA), React Router, Responsive CSS
+
+## Key Features
+- Dynamic browsing of SWAPI resources: Characters, Starships, Planets, Vehicles, Species.
+- Paginated data fetching with automatic timeout and fallback API failover (swapi.dev -> swapi.py4e.com).
+- 1:1 ID extraction from canonical SWAPI URLs to guarantee visual asset consistency.
+- Interactive modal view for deep-dive stats and physical traits.
+
+## Companion Project & Cross-Linking
+- Star Wars Gallery: https://starwarsgallery.netlify.app/
+- Description: Custom static image API and gallery serving high-resolution Star Wars assets mapped 1:1 to SWAPI resource endpoints.
+- Integration: Star Wars App requests images directly from `https://starwarsgallery.netlify.app/assets/{resource}/{id}.jpg`.
+
+## Routes
+- `/`: Home dashboard featuring main categories.
+- `/characters`: SWAPI People directory.
+- `/starships`: SWAPI Starships directory.
+- `/planets`: SWAPI Planets directory.
+- `/vehicles`: SWAPI Vehicles directory.
+- `/species`: SWAPI Species directory.

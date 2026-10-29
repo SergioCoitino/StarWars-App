@@ -4,10 +4,15 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import useSEO from "../hooks/useSEO";
 import FallbackImg from "../assets/Fallback-planet.png";
 
-
 export default function Starships() {
+  useSEO({
+    title: "Starships | Star Wars App",
+    description: "Explore legendary Star Wars starships including the Millennium Falcon, X-wing, and Star Destroyers."
+  });
+
   return (
     <>
       <Header />

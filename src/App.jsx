@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import useSEO from "./hooks/useSEO";
 
 import Img2 from "./assets/2.jpg";
 import Img3 from "./assets/3.jpg";
@@ -15,6 +16,10 @@ import "./App.css";
 const Img1 = "/1.jpg";
 
 export default function App() {
+  useSEO({
+    title: "Star Wars App | Explore Characters, Starships & Planets",
+    description: "Explore the Star Wars universe with interactive data on characters, starships, planets, vehicles, and species, powered by SWAPI and Star Wars Gallery."
+  });
 
   const pages = [
     { img: Img1, label: "Characters", path: "/characters" },
@@ -29,8 +34,8 @@ export default function App() {
       <Header />
 
       <Hero 
-      heroTitle="Explore the Star Wars Universe"
-      heroSubtitle="Discover characters, starships, planets, vehicles and species powered by SWAPI."
+        heroTitle="Explore the Star Wars Universe"
+        heroSubtitle="Discover characters, starships, planets, vehicles and species powered by SWAPI & Star Wars Gallery."
       />
 
       {/* HOME GRID */}
