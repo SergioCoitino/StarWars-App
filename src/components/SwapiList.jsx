@@ -11,32 +11,47 @@ export default function SwapiList({
   fallback,
   renderDetails
 }) {
-  const { items, next, prev, goNext, goPrev } = useSwapiPaginated(endpoint);
+  const { items, next, prev, goNext, goPrev, loading, error } = useSwapiPaginated(endpoint);
   const [selected, setSelected] = React.useState(null);
 
   const getIdFromUrl = (url) => {
     return url.split("/").filter(Boolean).pop();
   };
 
+  const handlePrev = () => {
+    goPrev();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleNext = () => {
+    goNext();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="main-container">
 
-      {/* GRID DE ITEMS */}
-      <div className="main-content">
-        {items.map((item) => {
-          const id = getIdFromUrl(item.url);
+      {loading && <p className="status-message">Loading...</p>}
+      {!loading && error && <p className="status-message">{error}</p>}
 
-          return (
-            <ItemCard
-              key={id}
-              name={item.name}
-              image={imagePath(id)}
-              fallback={fallback}
-              onClick={() => setSelected({ ...item, id })}
-            />
-          );
-        })}
-      </div>
+      {/* GRID DE ITEMS */}
+      {!loading && !error && (
+        <div className="main-content">
+          {items.map((item) => {
+            const id = getIdFromUrl(item.url);
+
+            return (
+              <ItemCard
+                key={id}
+                name={item.name}
+                image={imagePath(id)}
+                fallback={fallback}
+                onClick={() => setSelected({ ...item, id })}
+              />
+            );
+          })}
+        </div>
+      )}
 
       {/* MODAL */}
       <Modal visible={!!selected} onClose={() => setSelected(null)}>
@@ -47,15 +62,15 @@ export default function SwapiList({
 
       <div className="buttons">
         <button
-          onClick={goPrev}
-          style={{ visibility: prev ? "visible" : "hidden" }}
+          onClick={handlePrev}
+          style={{ visibility: prev && !loading ? "visible" : "hidden" }}
         >
           Previous
         </button>
 
         <button
-          onClick={goNext}
-          style={{ visibility: next ? "visible" : "hidden" }}
+          onClick={handleNext}
+          style={{ visibility: next && !loading ? "visible" : "hidden" }}
         >
           Next
         </button>

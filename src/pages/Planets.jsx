@@ -37,10 +37,10 @@ export default function Planets() {
             <span className="item-details">Name: {formatValue(item.name)}</span>
             <span className="item-details">Climate: {formatValue(item.climate)}</span>
             <span className="item-details">Terrain: {formatValue(item.terrain)}</span>
-            <span className="item-details">Population: {formatValue(item.population, {largeNumber : true})}</span>
-            <span className="item-details">Rotation Period: {formatValue(item.rotation_period)} Days</span>
-            <span className="item-details">Orbital Period: {formatValue(item.orbital_period)} Days</span>
-            <span className="item-details">Diameter: {formatValue(item.diameter, {largeNumber : true })} km</span>
+            <span className="item-details">Population: {formatValue(item.population, { largeNumber: true })}</span>
+            <span className="item-details">Rotation Period: {formatValue(item.rotation_period, { unit: "Days" })}</span>
+            <span className="item-details">Orbital Period: {formatValue(item.orbital_period, { unit: "Days" })}</span>
+            <span className="item-details">Diameter: {formatValue(item.diameter, { largeNumber: true, unit: "km" })}</span>
           </>
         )}
       />

@@ -14,9 +14,9 @@ export default function Header() {
 
   const socialLinks = [
     { url: "https://www.instagram.com/sergio.coitino/", label: "Instagram", icon: "fa-brands fa-instagram" },
-    { url: "https://www.linkedin.com/in/sergiocoitino/", label: "LinkedIn", icon: "fa-brands fa-linkedin-in" },
+    { url: "https://www.linkedin.com/in/sergio-coitino/", label: "LinkedIn", icon: "fa-brands fa-linkedin-in" },
     { url: "https://github.com/SergioCoitino", label: "GitHub", icon: "fa-brands fa-github" },
-    { url: "https://sergio-coitino-portfolio.netlify.app/", label: "Portfolio", icon: "fa-solid  fa-user-tie" },
+    { url: "https://sergio-coitino.netlify.app/", label: "Portfolio", icon: "fa-solid fa-user-tie" },
   ];
 
   return (
@@ -32,8 +32,8 @@ export default function Header() {
 
         <nav className="sidebar menu-nav">
           <ul>
-            {navItems.map((item, index) => (
-              <li key={index}>
+            {navItems.map((item) => (
+              <li key={item.path}>
                 <NavLink
                   to={item.path}
                   className={({ isActive }) => (isActive ? "active" : "")}
@@ -44,8 +44,8 @@ export default function Header() {
             ))}
 
             {/* SOCIAL LINKS MOBILE */}
-            {socialLinks.map((item, index) => (
-              <li key={`s-${index}`}>
+            {socialLinks.map((item) => (
+              <li key={item.label}>
                 <a href={item.url} target="_blank" rel="noopener noreferrer">
                   <i className={item.icon}></i> {item.label}
                 </a>
@@ -58,8 +58,8 @@ export default function Header() {
       {/* DESKTOP NAV */}
       <nav className="navegacao">
         <ul className="menu">
-          {navItems.map((item, index) => (
-            <li key={index}>
+          {navItems.map((item) => (
+            <li key={item.path}>
               <NavLink
                 className={({ isActive }) => (isActive ? "nav-item active" : "nav-item")}
                 to={item.path}
@@ -69,20 +69,23 @@ export default function Header() {
             </li>
           ))}
 
-          <ul className="social-media">
-            {socialLinks.map((item, index) => (
-              <li key={index}>
-                <a
-                  className="nav-item"
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className={item.icon}></i>
-                </a>
-              </li>
-            ))}
-          </ul>
+          <li>
+            <ul className="social-media">
+              {socialLinks.map((item) => (
+                <li key={item.label}>
+                  <a
+                    className="nav-item"
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={item.label}
+                  >
+                    <i className={item.icon}></i>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </li>
         </ul>
       </nav>
     </>

@@ -33,6 +33,7 @@
     overflow: hidden;
     transition: all .5s ease;
     text-align: center;
+    text-decoration: none;
 }
 
 .col:hover{
@@ -46,12 +47,14 @@
 }
 
 .col-title {
+    display: inline-block;
     font-weight: 500;
     font-size: 1.4rem;
     margin-bottom: 5px;
     text-decoration: none;
 }
 
+.col:hover .col-title,
 .col-title:hover{
     color: gold;
 } 

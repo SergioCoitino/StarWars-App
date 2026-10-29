@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import FallbackImg from "../assets/Fallback-planet.png";
 
 
 export default function Species() {
@@ -23,13 +24,13 @@ export default function Species() {
         imagePath={(id) =>
           `https://starwarsgallery.netlify.app/assets/species/${id}.jpg`
         }
-        fallback="/assets/fallback-species.png"
+        fallback={FallbackImg}
         renderDetails={(item, id) => (
           <>
             <div
               className="item-image"
               style={{
-                backgroundImage: `url(https://starwarsgallery.netlify.app/assets/species/${id}.jpg)`
+                backgroundImage: `url(https://starwarsgallery.netlify.app/assets/species/${id}.jpg), url(${FallbackImg})`
               }}
             ></div>
 
@@ -38,7 +39,7 @@ export default function Species() {
             <span className="item-details">Classification: {formatValue(item.classification)}</span>
             <span className="item-details">Hair Colors: {formatValue(item.hair_colors)}</span>
             <span className="item-details">Skin Colors: {formatValue(item.skin_colors)}</span>
-            <span className="item-details">Average Height: {formatValue(item.average_height)} cm</span>
+            <span className="item-details">Average Height: {formatValue(item.average_height, { unit: "cm" })}</span>
           </>
         )}
       />

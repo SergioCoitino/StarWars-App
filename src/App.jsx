@@ -38,18 +38,18 @@ export default function App() {
 
           {/* FILA SUPERIOR */}
           <div className="cards-page">
-            {pages.map((item, index) => (
-              <div className="col" key={index}>
+            {pages.map((item) => (
+              <Link className="col" key={item.path} to={item.path}>
                 <img
                   className="col-imagem"
                   src={item.img}
                   alt={item.label}
                   loading="lazy"
                 />
-                <Link className="col-title" to={item.path}>
+                <span className="col-title">
                   {item.label}
-                </Link>
-              </div>
+                </span>
+              </Link>
             ))}
           </div>
 

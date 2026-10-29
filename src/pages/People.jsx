@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import FallbackImg from "../assets/Fallback-planet.png";
 
 
 export default function Characters() {
@@ -22,19 +23,19 @@ export default function Characters() {
         imagePath={(id) =>
           `https://starwarsgallery.netlify.app/assets/people/${id}.jpg`
         }
-        fallback="/assets/fallback-people.png"
+        fallback={FallbackImg}
         renderDetails={(item, id) => (
           <>
             <div
               className="item-image"
               style={{
-                backgroundImage: `url(https://starwarsgallery.netlify.app/assets/people/${id}.jpg)`
+                backgroundImage: `url(https://starwarsgallery.netlify.app/assets/people/${id}.jpg), url(${FallbackImg})`
               }}
             ></div>
 
             <span className="item-details">Name: {formatValue(item.name)}</span>
-            <span className="item-details">Height: {formatValue(item.height)} cm</span>
-            <span className="item-details">Mass: {formatValue(item.mass, { weight:true })}</span>
+            <span className="item-details">Height: {formatValue(item.height, { unit: "cm" })}</span>
+            <span className="item-details">Mass: {formatValue(item.mass, { weight: true })}</span>
             <span className="item-details">Gender: {formatValue(item.gender)}</span>
             <span className="item-details">Eye Color: {formatValue(item.eye_color)}</span>
             <span className="item-details">Birth Year: {formatValue(item.birth_year)}</span>

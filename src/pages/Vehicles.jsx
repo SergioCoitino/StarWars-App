@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import SwapiList from "../components/SwapiList";
 import { formatValue } from "../utils/format";
+import FallbackImg from "../assets/Fallback-planet.png";
 
 
 export default function Vehicles() {
@@ -23,7 +24,7 @@ export default function Vehicles() {
         imagePath={(id) =>
           `https://starwarsgallery.netlify.app/assets/vehicles/${id}.jpg`
         }
-        fallback="/assets/fallback-image-vehicles.png"
+        fallback={FallbackImg}
         renderDetails={(item, id) => {
 
           return (
@@ -31,7 +32,7 @@ export default function Vehicles() {
               <div
                 className="item-image"
                 style={{
-                  backgroundImage: `url(https://starwarsgallery.netlify.app/assets/vehicles/${id}.jpg)`
+                  backgroundImage: `url(https://starwarsgallery.netlify.app/assets/vehicles/${id}.jpg), url(${FallbackImg})`
                 }}
               ></div>
 

@@ -9,7 +9,13 @@
     padding-top: 45px;
 }
 
-
+.status-message {
+    color: gold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
 
 .main-content {
     width: 100%;
@@ -74,10 +80,11 @@
     background-color: rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 1001;
 }
 
 .modal-content {
+    position: relative;
     width: 25vw;
     height: auto;
     background-color: #0d0d0d;
@@ -87,6 +94,25 @@
     row-gap: 15px;
     padding: 30px 10px;
     align-items: center;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    border: none;
+    color: gold;
+    font-size: 1.6rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: transparent;
+    color: #fff;
 }
 
 .item-image {

@@ -4,7 +4,7 @@ export function formatValue(value, options = {}) {
   const raw = value.toString().trim().toLowerCase();
 
   // Unknown → "Unknown"
-  if (["unknown", "n/a", "none"].includes(raw)) return "Unknown";
+  if (["unknown", "n/a", "none", ""].includes(raw)) return "Unknown";
 
   // Capitalización
   const capitalize = (str) =>
@@ -20,22 +20,21 @@ export function formatValue(value, options = {}) {
   if (isNaN(numeric)) return capitalize(value);
 
   // ------- DISTANCIA -------
-if (options.distance) {
-  // SWAPI devuelve metros
-  // 0.36 → 36 cm
-  if (numeric < 1) {
-    return `${(numeric * 100).toFixed(0)} Cm`;
+  if (options.distance) {
+    // SWAPI devuelve metros
+    // 0.36 → 36 cm
+    if (numeric < 1) {
+      return `${(numeric * 100).toFixed(0)} Cm`;
+    }
+
+    // 1 a 999 metros
+    if (numeric < 1000) {
+      return `${numeric} M`;
+    }
+
+    // 1000+ metros → convertir a km
+    return `${(numeric / 1000).toFixed(1)} Km`;
   }
-
-  // 1 a 999 metros
-  if (numeric < 1000) {
-    return `${numeric} M`;
-  }
-
-  // 1000+ metros → convertir a km
-  return `${(numeric / 1000).toFixed(1)} Km`;
-}
-
 
   // ------- VELOCIDAD -------
   if (options.speed) {
@@ -54,10 +53,15 @@ if (options.distance) {
 
   // ------- GRANDES NÚMEROS -------
   if (options.largeNumber) {
-    return formatLarge(numeric);
+    const formatted = formatLarge(numeric);
+    return options.unit ? `${formatted} ${options.unit}` : formatted;
   }
 
-  return capitalize(value);
+  if (options.unit) {
+    return `${capitalize(value.toString())} ${options.unit}`;
+  }
+
+  return capitalize(value.toString());
 }
 
 function formatLarge(num) {

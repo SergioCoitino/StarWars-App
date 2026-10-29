@@ -34,6 +34,7 @@ export default function useSwapiPaginated(resource) {
       setError(null);
 
       let response;
+      let activeApi = baseApi;
 
       try {
         // Intento principal con timeout
@@ -42,6 +43,7 @@ export default function useSwapiPaginated(resource) {
       } catch {
         // Fallback automático
         const fallbackUrl = fetchUrl.replace(PRIMARY_API, FALLBACK_API);
+        activeApi = FALLBACK_API;
         setBaseApi(FALLBACK_API);
         response = await fetchWithTimeout(fallbackUrl);
       }
@@ -53,8 +55,8 @@ export default function useSwapiPaginated(resource) {
       const data = await response.json();
 
       setItems(data.results || []);
-      setNext(normalizeUrl(data.next, baseApi));
-      setPrev(normalizeUrl(data.previous, baseApi));
+      setNext(normalizeUrl(data.next, activeApi));
+      setPrev(normalizeUrl(data.previous, activeApi));
     } catch (err) {
       setError(err.message);
       setItems([]);
