@@ -19,11 +19,11 @@ const normalizeUrl = (url, baseApi) => {
   return url.replace(PRIMARY_API, baseApi);
 };
 
-export default function useSwapiPaginated(resource) {
+export default function useSwapiPaginated(resource, searchQuery = "") {
   const [items, setItems] = useState([]);
   const [next, setNext] = useState(null);
   const [prev, setPrev] = useState(null);
-  const [url, setUrl] = useState(`${PRIMARY_API}/${resource}/`);
+  const [url, setUrl] = useState("");
   const [baseApi, setBaseApi] = useState(PRIMARY_API);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -65,11 +65,12 @@ export default function useSwapiPaginated(resource) {
     }
   };
 
-  // Actualiza el recurso (people, planets, starships, etc.)
+  // Actualiza URL al cambiar recurso o término de búsqueda
   useEffect(() => {
     setBaseApi(PRIMARY_API);
-    setUrl(`${PRIMARY_API}/${resource}/`);
-  }, [resource]);
+    const query = searchQuery ? `?search=${encodeURIComponent(searchQuery.trim())}` : "";
+    setUrl(`${PRIMARY_API}/${resource}/${query}`);
+  }, [resource, searchQuery]);
 
   // Ejecuta fetch cuando cambia la URL
   useEffect(() => {

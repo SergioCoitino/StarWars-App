@@ -14,6 +14,15 @@ const Vehicles = lazy(() => import("./pages/Vehicles.jsx"));
 const Species = lazy(() => import("./pages/Species.jsx"));
 const NotFound = lazy(() => import("./pages/NotFound.jsx"));
 
+// Registro de Service Worker (PWA)
+if ("serviceWorker" in navigator && import.meta.env.PROD) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js").catch((err) => {
+      console.error("Service worker registration failed:", err);
+    });
+  });
+}
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter basename="/">
