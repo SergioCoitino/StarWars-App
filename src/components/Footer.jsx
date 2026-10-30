@@ -10,10 +10,9 @@ function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           className="coffee-btn"
-          title="Support the creator on Buy Me a Coffee"
+          title="Buy Me a Coffee"
         >
-          <i className="fa-solid fa-mug-hot" aria-hidden="true"></i>
-          <span>Buy me a coffee</span>
+          Buy Me a Coffee
         </a>
       </div>
       <p>
