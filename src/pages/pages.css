@@ -266,6 +266,38 @@
     color: gold;
 }
 
+.amazon-affiliate-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 80%;
+    max-width: 220px;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #ff9900, #e67a00);
+    color: #111;
+    font-weight: 700;
+    font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.amazon-affiliate-btn i {
+    font-size: 1.15rem;
+    color: #111;
+}
+
+.amazon-affiliate-btn:hover {
+    background: linear-gradient(135deg, #ffa724, #ff8c00);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 153, 0, 0.5);
+    color: #000;
+}
+
 .modal-coffee-link {
     font-size: 0.85rem;
     color: gold;

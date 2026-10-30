@@ -127,7 +127,7 @@ export default function SwapiList({
       )}
 
       {/* MODAL */}
-      <Modal visible={!!selected} onClose={() => setSelected(null)}>
+      <Modal visible={!!selected} itemName={selected?.name} onClose={() => setSelected(null)}>
         {selected && renderDetails(selected, selected.id)}
       </Modal>
 
