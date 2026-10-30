@@ -266,6 +266,24 @@
     color: gold;
 }
 
+.modal-coffee-link {
+    font-size: 0.85rem;
+    color: gold;
+    opacity: 0.8;
+    text-decoration: underline;
+    margin-top: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: all 0.3s ease;
+}
+
+.modal-coffee-link:hover {
+    opacity: 1;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
 /* PAGINATION */
 
 .buttons {

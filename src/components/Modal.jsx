@@ -31,6 +31,15 @@ export default function Modal({ visible, onClose, children }) {
           &times;
         </button>
         {children}
+        <a
+          href="https://buymeacoffee.com/csergioferh"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="modal-coffee-link"
+          title="Support this project on Buy Me a Coffee"
+        >
+          <i className="fa-solid fa-mug-hot" aria-hidden="true"></i> Buy me a coffee
+        </a>
       </div>
     </div>
   );

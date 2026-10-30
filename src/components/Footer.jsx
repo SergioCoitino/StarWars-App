@@ -4,6 +4,18 @@ import "./components.css";
 function Footer() {
   return (
     <footer>
+      <div className="coffee-container">
+        <a
+          href="https://buymeacoffee.com/csergioferh"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="coffee-btn"
+          title="Support the creator on Buy Me a Coffee"
+        >
+          <i className="fa-solid fa-mug-hot" aria-hidden="true"></i>
+          <span>Buy me a coffee</span>
+        </a>
+      </div>
       <p>
         Developed by <a href="https://github.com/SergioCoitino" className="copyrigth" target="_blank" rel="noopener noreferrer">&copy; Sergio Coitiño</a>
         {" • "}

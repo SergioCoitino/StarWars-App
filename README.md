@@ -139,6 +139,7 @@ Special configuration ensures:
 
 If you found this project useful or interesting:
 
+- ☕ Support the project: **[Buy Me a Coffee](https://buymeacoffee.com/csergioferh)**
 - ⭐ Please consider **starring the repository on GitHub**
 - 📝 Feedback, suggestions, and reviews are very welcome
 
