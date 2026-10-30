@@ -2,7 +2,6 @@
 import { useEffect } from "react";
 import PropTypes from "prop-types";
 
-// Adicione aqui a sua tag de associado Amazon quando se cadastrar (ex: "starwarsapp-20")
 const AMAZON_AFFILIATE_TAG = "sergiocoitino-20";
 
 export default function Modal({ visible, onClose, itemName, children }) {
@@ -43,29 +42,28 @@ export default function Modal({ visible, onClose, itemName, children }) {
 
         {children}
 
-        {/* BOTAO DE AFILIADO DA AMAZON */}
-        {itemName && (
-          <a
-            href={getAmazonUrl(itemName)}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="amazon-affiliate-btn"
-            title={`Find Star Wars ${itemName} products & collectibles on Amazon`}
-          >
-            <i className="fa-brands fa-amazon" aria-hidden="true"></i>
-            <span>Ver na Amazon</span>
-          </a>
-        )}
+        {/* BOTOES DE ACAO (SEM EMOJIS, FORMATO DE BOTAO REAL) */}
+        <div className="modal-actions">
+          {itemName && (
+            <a
+              href={getAmazonUrl(itemName)}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="btn-modal-amazon"
+            >
+              Ver na Amazon
+            </a>
+          )}
 
-        <a
-          href="https://buymeacoffee.com/csergioferh"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="modal-coffee-link"
-          title="Support this project on Buy Me a Coffee"
-        >
-          <i className="fa-solid fa-mug-hot" aria-hidden="true"></i> Buy me a coffee
-        </a>
+          <a
+            href="https://buymeacoffee.com/csergioferh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-modal-coffee"
+          >
+            Apoiar Projeto
+          </a>
+        </div>
       </div>
     </div>
   );

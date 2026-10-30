@@ -266,53 +266,63 @@
     color: gold;
 }
 
-.amazon-affiliate-btn {
-    display: inline-flex;
+/* MODAL ACTIONS */
+
+.modal-actions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-modal-amazon {
+    width: 100%;
+    max-width: 240px;
+    height: 40px;
+    background: #ff9900;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    width: 80%;
-    max-width: 220px;
-    padding: 0.5rem 1rem;
-    margin-top: 10px;
-    background: linear-gradient(135deg, #ff9900, #e67a00);
-    color: #111;
-    font-weight: 700;
-    font-size: 0.9rem;
-    font-family: 'Roboto', sans-serif;
-    border-radius: 20px;
     text-decoration: none;
-    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.35);
-    transition: all 0.3s ease;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(255, 153, 0, 0.25);
 }
 
-.amazon-affiliate-btn i {
-    font-size: 1.15rem;
-    color: #111;
-}
-
-.amazon-affiliate-btn:hover {
-    background: linear-gradient(135deg, #ffa724, #ff8c00);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(255, 153, 0, 0.5);
+.btn-modal-amazon:hover {
+    background: #e68a00;
     color: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 153, 0, 0.4);
 }
 
-.modal-coffee-link {
-    font-size: 0.85rem;
+.btn-modal-coffee {
+    width: 100%;
+    max-width: 240px;
+    height: 40px;
+    background: transparent;
     color: gold;
-    opacity: 0.8;
-    text-decoration: underline;
-    margin-top: 8px;
-    display: inline-flex;
+    border: 1px solid gold;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    display: flex;
     align-items: center;
-    gap: 0.35rem;
-    transition: all 0.3s ease;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.25s ease;
 }
 
-.modal-coffee-link:hover {
-    opacity: 1;
-    color: #fff;
+.btn-modal-coffee:hover {
+    background: gold;
+    color: #000;
     transform: translateY(-1px);
 }
 
