@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import PropTypes from "prop-types";
 
 // Adicione aqui a sua tag de associado Amazon quando se cadastrar (ex: "starwarsapp-20")
-const AMAZON_AFFILIATE_TAG = "";
+const AMAZON_AFFILIATE_TAG = "sergiocoitino-20";
 
 export default function Modal({ visible, onClose, itemName, children }) {
   useEffect(() => {
